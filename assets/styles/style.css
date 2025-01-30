@@ -1,0 +1,184 @@
+/* Cores */
+:root {
+    --cor-primaria: #a94d41;
+    --cor-secundaria: #6c8a8c;
+    --cor-tercearia: #cf7e65;
+    --cor-quaternaria: #acd1d1;
+    --cor-quinternaria: #f9f9f9;
+} 
+
+/* Importando fonte Hemigeda */
+@font-face {
+    font-family: 'Hemigeda';
+    src: url(/assets/fonts/Hegimeda.otf) format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Reset de estilos */
+* {
+    padding: 0; 
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Hemigeda', sans-serif;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--cor-quinternaria);
+}
+
+/* Conteúdo principal */
+.conteudoPrincipal {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+    border: none;
+}
+
+/* Botões de compartilhamento e de modos */
+.botoesCompartilharModos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btnCompartilhar, .btnModos {
+    padding: 10px;
+    font-size: 1.6rem;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: var(--cor-primaria);
+    min-width: 40px;
+    min-height: 40px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btnCompartilhar:focus, .btnModos:focus {
+    outline: none; 
+    color: var(--cor-secundaria);
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+/* Apresentação */
+.perfilEApresentacao {
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.3rem;
+}
+
+.perfil img {
+    width: 170px;
+    border-radius: 50%;
+}
+
+.perfil img:hover {
+    transition: background-color 0.3s, transform 0.2s;
+    transform: scale(1.1);
+}
+
+.apresentacao p {
+    line-height: 2.5rem;
+}
+
+.texto-principal {
+    font-size: 1.5rem;
+    border-right: 0.1rem solid black;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(30) 1s forwards, blinking 0.75s step-end infinite;
+}
+
+.textoCorPrincipal {
+    color: var(--cor-primaria);
+}
+
+.texto-secundario {
+    font-size: 1.3rem;
+    color: var(--cor-tercearia);
+    font-weight: 600;
+}
+
+/* Botões de Links principais */
+
+.linksPrincipais {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+    padding: 10px;
+}
+
+.links-btn {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: var(--cor-primaria);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    outline: none;
+}
+
+.links-btn:hover {
+    transform: scale(1.1);
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+.links-btn:focus {
+    background-color: var(--cor-secundaria);
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+.rodape {
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.linksExtras {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.linksExtras a {
+    font-size: 2rem;
+    color: var(--cor-primaria);
+    transition: background-color 0.5s, transform 0.2s;
+}
+
+.linksExtras a:hover {
+    transform: scale(1.3);
+}
+
+.linksExtras a:focus {
+    color: var(--cor-secundaria);
+}
+
+/* Keyframes do paragrafo de apresentação */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 101%;
+    }
+}
+
+@keyframes blinking {
+    50% {
+        border-color: transparent;
+    }
+}
