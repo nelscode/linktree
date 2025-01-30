@@ -21,7 +21,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Hemigeda', sans-serif;
-    line-height: 1.5;
 }
 
 body {
@@ -48,12 +47,13 @@ body {
 
 .btnCompartilhar, .btnModos {
     padding: 10px;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: center;
     border: none;
     border-radius: 10px;
     cursor: pointer;
     color: var(--cor-primaria);
+    background-color: var(--cor-quinternaria);
     min-width: 40px;
     min-height: 40px;
     transition: background-color 0.3s, transform 0.2s;
@@ -74,7 +74,7 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 1.3rem;
+    gap: 20px;
 }
 
 .perfil img {
@@ -88,12 +88,12 @@ body {
 }
 
 .apresentacao p {
-    line-height: 2.5rem;
+    line-height: 2rem;
 }
 
 .texto-principal {
     font-size: 1.5rem;
-    border-right: 0.1rem solid black;
+    border-right: 2px solid black;
     white-space: nowrap;
     overflow: hidden;
     animation: typing 3s steps(30) 1s forwards, blinking 0.75s step-end infinite;
@@ -117,15 +117,16 @@ body {
     gap: 1.2rem;
     width: 100%;
     padding: 10px;
+    background-color: var(--cor-quinternaria);
 }
 
 .links-btn {
     width: 100%;
-    padding: 1rem;
+    padding: 18px;
     font-size: 1.2rem;
     border: none;
     border-radius: 10px;
-    color: white;
+    color: var(--cor-quinternaria);
     background-color: var(--cor-primaria);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     cursor: pointer;
@@ -143,7 +144,7 @@ body {
 }
 
 .rodape {
-    margin-top: 1rem;
+    margin-top: 20px;
     width: 100%;
 }
 
@@ -153,7 +154,7 @@ body {
 }
 
 .linksExtras a {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--cor-primaria);
     transition: background-color 0.5s, transform 0.2s;
 }
@@ -180,5 +181,56 @@ body {
 @keyframes blinking {
     50% {
         border-color: transparent;
+    }
+}
+
+@media(min-width: 501px){
+    .conteudoPrincipal {
+        margin: 19px auto;
+        max-width: 450px;
+        border: 3px solid var(--cor-primaria);
+        border-radius: 20px;
+        box-shadow: 0 10px 8px rgba(0, 0, 0, 0.3);
+        padding: 10px;
+    }
+
+    .perfilEApresentacao {
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .perfil img {
+        width: 130px;
+    }
+
+    .texto-principal {
+        font-size: 1.3rem;
+    }
+    
+    
+    .texto-secundario {
+        font-size: 1rem;
+    }
+
+    .linksPrincipais {
+        gap: 1rem;
+        width: 100%;
+        padding: 5px;
+    }
+    
+    .links-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+    }
+
+    .rodape {
+        margin-top: 10px;
+    }
+
+    .linksExtras a {
+        font-size: 2.3rem;
+        color: var(--cor-primaria);
+        transition: background-color 0.5s, transform 0.2s;
     }
 }
