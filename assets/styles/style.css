@@ -122,7 +122,7 @@ body {
 
 .texto-secundario {
     font-size: 1.3rem;
-    color: var(--cor-tercearia);
+    color: var(--cor-primaria);
     font-weight: 600;
 }
 
