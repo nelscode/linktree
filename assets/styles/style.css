@@ -6,16 +6,18 @@
     --cor-quaternaria: #acd1d1;
     --cor-quinternaria: #f9f9f9;
     --texto-cor: #E0E0E0;
+    --texto-cor-principal: #a94d41;
 } 
 
 /* Modo dark */
 [data-tema="escuro"]{
     --cor-primaria: #cf7e65;
     --cor-secundaria: #A8B2B2;
-    --cor-tercearia: #cf7e65;
+    --cor-tercearia: #a94d41;
     --cor-quaternaria: #1E1E1E;
     --cor-quinternaria: #121212;
     --texto-cor: #E0E0E0;
+    --texto-cor-principal: #cf7e65;
 }
 
 /* Importando fonte Hemigeda */
@@ -110,6 +112,10 @@ body {
     animation: typing 3s steps(30) 1s forwards, blinking 0.75s step-end infinite;
 }
 
+.imgEstrela {
+    width: 20px;
+}
+
 /* Quando o tema for escuro, o texto fica branco */
 [data-tema="escuro"] .texto-principal {
     color: white;
@@ -117,12 +123,12 @@ body {
 }
 
 .textoCorPrincipal {
-    color: var(--cor-primaria);
+    color: var(--texto-cor-principal);
 }
 
 .texto-secundario {
     font-size: 1.3rem;
-    color: var(--cor-primaria);
+    color: var(--texto-cor-principal);
     font-weight: 600;
 }
 
